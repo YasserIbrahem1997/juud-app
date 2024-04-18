@@ -3,6 +3,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:juud/view/screens/home_screens/home_screens.dart';
 import 'package:juud/view/screens/info_screen.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
 
       builder: DevicePreview.appBuilder,
       theme: ThemeData(
-        fontFamily: 'Tajawal',             // <-- 1
+        fontFamily: 'Tajawal',
 
       ),
       darkTheme: ThemeData.dark(),
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        nextScreen:  StartApp(),
+        nextScreen:  HomeScreens(),
         splashIconSize: MediaQuery.of(context).size.height/1,
         splashTransition: SplashTransition.sizeTransition,
         duration: 3000,
